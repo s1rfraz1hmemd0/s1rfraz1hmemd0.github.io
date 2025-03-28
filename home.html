@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vibrant Animated Website</title>
+    <title>Vibrant Animated Website with Music</title>
     <style>
         /* Body background and text styling */
         body {
@@ -90,15 +90,32 @@
             transform: scale(1.1);
             background-color: #FF4500;
         }
+
+        /* Audio player styling */
+        audio {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            padding: 10px;
+        }
     </style>
 </head>
 <body>
 
     <div class="content">
         <h1>Welcome to My Vibrant Website!</h1>
-        <p>This website is filled with bright colors and fun animations. Enjoy your stay!</p>
+        <p>This website is filled with bright colors, fun animations, and a soothing melody playing in the background. Enjoy your stay!</p>
         <button class="button">Click Me</button>
     </div>
+
+    <!-- Audio player with the Azan.mp3 file -->
+    <audio controls autoplay loop>
+        <source src="Azan.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
 
 </body>
 </html>
