@@ -1,121 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vibrant Animated Website with Music</title>
-    <style>
-        /* Body background and text styling */
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(45deg, #FF5733, #FFC300, #DAF7A6, #FF6347);
-            background-size: 400% 400%;
-            animation: gradientAnimation 10s ease infinite;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        /* Animation for the gradient */
-        @keyframes gradientAnimation {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
-        }
-
-        /* Center content */
-        .content {
-            text-align: center;
-            animation: fadeIn 3s ease-in-out;
-        }
-
-        /* Title animation */
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            animation: bounce 1s infinite alternate;
-        }
-
-        /* Bounce animation for the title */
-        @keyframes bounce {
-            0% {
-                transform: translateY(0);
-            }
-            100% {
-                transform: translateY(-20px);
-            }
-        }
-
-        /* Animation for the paragraph */
-        p {
-            font-size: 1.2rem;
-            animation: fadeInText 3s ease-in-out;
-        }
-
-        @keyframes fadeInText {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-
-        /* Button styles */
-        .button {
-            padding: 15px 30px;
-            background-color: #FF6347;
-            color: white;
-            font-size: 1.2rem;
-            border: none;
-            cursor: pointer;
-            margin-top: 30px;
-            border-radius: 5px;
-            transition: transform 0.3s ease;
-        }
-
-        /* Button hover effect */
-        .button:hover {
-            transform: scale(1.1);
-            background-color: #FF4500;
-        }
-
-        /* Audio player styling */
-        audio {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: rgba(0, 0, 0, 0.6);
-            border-radius: 10px;
-            padding: 10px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sarfraz Ahmed - Personal Website</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+    
+    body {
+      background-color: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    header {
+      background-color: #2c3e50;
+      color: #fff;
+      padding: 60px 0;
+      text-align: center;
+    }
+    
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #fff;
+      margin-bottom: 20px;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    
+    .subtitle {
+      font-size: 1.2rem;
+      opacity: 0.8;
+    }
+    
+    nav {
+      background-color: #34495e;
+      padding: 15px 0;
+    }
+    
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+    }
+    
+    nav ul li {
+      margin: 0 15px;
+    }
+    
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    
+    nav ul li a:hover {
+      color: #3498db;
+    }
+    
+    section {
+      padding: 60px 0;
+    }
+    
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2rem;
+      color: #2c3e50;
+    }
+    
+    .about-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .about-text {
+      margin-bottom: 30px;
+    }
+    
+    .audio-player {
+      width: 100%;
+      max-width: 500px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    
+    .audio-title {
+      margin-bottom: 15px;
+      color: #2c3e50;
+    }
+    
+    audio {
+      width: 100%;
+    }
+    
+    .audio-controls {
+      margin-top: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+    
+    button {
+      padding: 8px 15px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    
+    button:hover {
+      background-color: #2980b9;
+    }
+    
+    footer {
+      background-color: #2c3e50;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+    
+    .social-links {
+      margin-top: 15px;
+    }
+    
+    .social-links a {
+      color: #fff;
+      margin: 0 10px;
+      font-size: 1.2rem;
+      text-decoration: none;
+    }
+    
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      nav ul li {
+        margin: 5px 0;
+      }
+    }
+  </style>
 </head>
 <body>
-
-    <div class="content">
-        <h1>Welcome to My Vibrant Website!</h1>
-        <p>This website is filled with bright colors, fun animations, and a soothing melody playing in the background. Enjoy your stay!</p>
-        <button class="button">Click Me</button>
+  <header>
+    <div class="container">
+      <img src="/placeholder.svg?height=150&width=150" alt="Sarfraz Ahmed" class="profile-img">
+      <h1>Sarfraz Ahmed</h1>
+      <p class="subtitle">Welcome to my personal website</p>
     </div>
+  </header>
+  
+  <nav>
+    <div class="container">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#audio">Audio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-content">
+        <p class="about-text">
+          Hello! I'm Sarfraz Ahmed. Welcome to my personal website. I've created this space to share a bit about myself
+          and my interests. Feel free to explore and get to know me better.
+        </p>
+        <p class="about-text">
+          I'm passionate about [your interests/profession]. When I'm not [working/studying], you can find me [hobbies/activities].
+          I believe in [personal philosophy or values].
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <section id="audio">
+    <div class="container">
+      <h2 class="section-title">Audio Player</h2>
+      <div class="audio-player">
+        <h3 class="audio-title">Listen to Azan</h3>
+        <audio id="azanAudio" src="azan.mp3" preload="auto"></audio>
+        <div class="audio-controls">
+          <button id="playBtn">Play</button>
+          <button id="pauseBtn">Pause</button>
+          <button id="stopBtn">Stop</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact Me</h2>
+      <div class="about-content">
+        <p class="about-text">
+          Feel free to reach out to me at: <strong>email@example.com</strong>
+        </p>
+        <div class="social-links">
+          <a href="#" target="_blank">LinkedIn</a>
+          <a href="#" target="_blank">Twitter</a>
+          <a href="#" target="_blank">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Sarfraz Ahmed. All rights reserved.</p>
+    </div>
+  </footer>
 
-    <!-- Audio player with the Azan.mp3 file -->
-    <audio controls autoplay loop>
-        <source src="azan.mp3" type="audio/mp3">
-        Your browser does not support the audio element.
-    </audio>
-
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const audio = document.getElementById('azanAudio');
+      const playBtn = document.getElementById('playBtn');
+      const pauseBtn = document.getElementById('pauseBtn');
+      const stopBtn = document.getElementById('stopBtn');
+      
+      playBtn.addEventListener('click', function() {
+        audio.play();
+      });
+      
+      pauseBtn.addEventListener('click', function() {
+        audio.pause();
+      });
+      
+      stopBtn.addEventListener('click', function() {
+        audio.pause();
+        audio.currentTime = 0;
+      });
+      
+      // Auto play on page load (uncomment if desired)
+      // audio.play();
+    });
+  </script>
 </body>
 </html>
+
