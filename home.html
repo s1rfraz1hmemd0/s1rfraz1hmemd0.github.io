@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibrant Animated Website</title>
+    <style>
+        /* Body background and text styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(45deg, #FF5733, #FFC300, #DAF7A6, #FF6347);
+            background-size: 400% 400%;
+            animation: gradientAnimation 10s ease infinite;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Animation for the gradient */
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Center content */
+        .content {
+            text-align: center;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        /* Title animation */
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            animation: bounce 1s infinite alternate;
+        }
+
+        /* Bounce animation for the title */
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-20px);
+            }
+        }
+
+        /* Animation for the paragraph */
+        p {
+            font-size: 1.2rem;
+            animation: fadeInText 3s ease-in-out;
+        }
+
+        @keyframes fadeInText {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Button styles */
+        .button {
+            padding: 15px 30px;
+            background-color: #FF6347;
+            color: white;
+            font-size: 1.2rem;
+            border: none;
+            cursor: pointer;
+            margin-top: 30px;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        /* Button hover effect */
+        .button:hover {
+            transform: scale(1.1);
+            background-color: #FF4500;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content">
+        <h1>Welcome to My Vibrant Website!</h1>
+        <p>This website is filled with bright colors and fun animations. Enjoy your stay!</p>
+        <button class="button">Click Me</button>
+    </div>
+
+</body>
+</html>
